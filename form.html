@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <!-- Created By CodingLab - www.codinglabweb.com -->
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <title> Responsive Registration Form | CodingLab </title>
-    <link rel="stylesheet" href="form.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
+
+<head>
+  <meta charset="UTF-8">
+  <title> Responsive Registration Form | CodingLab </title>
+  <link rel="stylesheet" href="form.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <body>
   <div class="container">
     <div class="title">Registration</div>
@@ -35,23 +37,55 @@
           </div>
           <div class="input-box">
             <span class="details">Marko</span>
-            <select placeholder="Confirm your password"  id="box"required>
-                <option >Plane</option>
-                <option>Radhe-Sham</option>
-                <option>Padhadi</option>
-                <option>Rajvadi</option>
-                <option>Kesar-Gold</option>
-                <option>Vrundavan</option>
+            <select placeholder="Confirm your password" id="box" required>
+              <option>Plane</option>
+              <option>Radhe-Sham</option>
+              <option>Padhadi</option>
+              <option>Rajvadi</option>
+              <option>Kesar-Gold</option>
+              <option>Vrundavan</option>
             </select>
           </div>
         </div>
-        
-        
-        <div class="button">
-          <input type="submit" value="Register">
-        </div>
-      </form>
+
+        <div class="main-Categries">
+          <h2>
+            type of item
+          </h2>
+          <div class="input-box">
+            <!-- <span class="details">GST Number</span> -->
+            <input type="text" placeholder="Exp-keser gold" class="deta" id="notmt" required><br>
+            <span id="mag-mt" class="mag"></span>
+          </div> 
+
+           <div class="input-box">
+          
+            <select placeholder="Confirm your password" id="box1" required>
+              <option>50 kg</option>
+              <option>60 kg</option>
+              
+            </select>
+          </div>
+          
+          
+          <div class="input-box">
+            <!-- <span class="details">GST Number</span> -->
+            <input type="text" placeholder="exe bag"class="deta"  id="nan2" ><br>
+            <span id="msg-nan" class="mag"></span>
+          </div>
     </div>
+
+    <!-- <label for="userInput">Enter a number:</label>
+<input type="text" id="userInput"> -->
+<input type="submit" onclick="checkNumber()" value="Registration" class="submit">
+
+   
+    </form>
   </div>
+  </div>
+  <script src="form.js"></script>
 </body>
+
 </html>
+
+<!-- required -->
