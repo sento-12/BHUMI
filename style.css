@@ -223,6 +223,7 @@
     padding-bottom: 15px;
 }
 
+
 .footer-about
 {
     width: 100%;
@@ -234,6 +235,56 @@
     background-color: #111729;
     font-size: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.changeWeb  {
+    width: 110px;
+    position: absolute;
+    top: 26px;
+   right: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.changeWeb button {
+    padding: 12px;
+    border-radius: 5px;
+    border: 3px solid black;
+    font-weight: bold;
+    font-size: 16px;
+    right: 5px;
+    cursor: pointer;
+}
+
+
+.change{
+    position: absolute;
+    top: 75px;
+    right: 80px;
+    padding: 42px;
+    border-radius: 25px;
+    background-color: #9db0b6;
+    display: none;
+}
+
+.change input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.change .changeConform{
+    font-weight: 500;
+    font-size: 23px;
+    border: black;
+    background: linear-gradient(135deg, #879eac, #9b59b6);
+
 }
 
 
@@ -256,9 +307,7 @@
         justify-content: space-evenly;
     }
 
-    .nav-logo img{
-
-    }
+   
     
     #line{
         border-bottom: 5px solid #bcdbc1;
