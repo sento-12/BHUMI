@@ -4,47 +4,39 @@
 }
 
 .header-bar{
-    width: 100%;
-    height: 230px;
+   
+    /* min-height: 230px; */
     /* border: 2px solid black; */
     background-color: #222e50;
     display: flex;
     align-items: center;
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
     
     
 }
 
 .nav-logo{
-    width: 25%;
-    height: 230px;
+    min-height: 150px;
 }
 
-.logo{
-    /* border: 2px solid #d1d5d2; */
-    background-image: url(Screenshot\ 2023-12-20\ 191810.png);
-    width: 250px;
-    height: 230px;
-    background-size: cover;
-    margin-left: 12px;
+.nav-logo img{
+    height: 138px;
+    width: 163px;
 }
-
 
 /* NAME TAGE */
 
 .nav-name{
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     /* border: 2px solid white; */
-    margin-top: 90px;
-    margin-right: 50px;
-    margin-left: 40px;
+  
     /* display: flex; */
 }
 
 .name{
     width: 60%;
-    height: 100%;
+    /* height: 100%; */
     color: #d1d5d2;
     display: flex;
     align-items: center;
@@ -72,12 +64,13 @@
 }
 
 .location{
-    width: 800px;
-    height: 100%;
+    /* width: 800px; */
+    /* height: 100%; */
     /* border: 2px solid white; */
     margin-top: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
+    margin-left: 15px;
 }
 
 .location h3{
@@ -88,8 +81,7 @@
 /* body..... part......*/
 
 .body{
-    width: 100%;
-    height: 100%;
+    
     background-color: #bcd8c1;
     align-items: center;
     justify-content: center;
@@ -100,7 +92,7 @@
 
 .body-kesar{
     width: 45%;
-    height: 450px;
+    /* max-height: 450px; */
     background-color: #439ab6;
     margin: 20px;
     border-radius: 3px;
@@ -114,7 +106,7 @@
 
 .body-paghadi{
     width: 45%;
-    height: 450px;
+    /* height: 450px; */
     background-color: #e9d985;
     border-radius: 3px;
     margin: 20px;
@@ -126,7 +118,7 @@
 
 .body-vrundavan{
     width: 45%;
-    height: 450px;
+    /* height: 450px; */
     background-color: #439a86;
     border-radius: 3px;
     margin-top: 15px;
@@ -145,10 +137,10 @@
 
 .kg50{ border-radius: 10px;
     
-    height: 230px;
+    height: 100px;
     width: 48%;
     border-right: 2px solid black;
-    margin-left: 12px;
+    /* margin-left: 12px; */
     position: relative;
     z-index: 75;
     display: flex;
@@ -158,7 +150,7 @@
 }
 
 .kg60{ border-radius: 10px;
-    height: 230px;
+    height: 100px;
     width: 48%;
     border-left: 2px solid black;
     display: flex;
@@ -201,6 +193,7 @@
     font-size: 50px;
     margin-left: 35px;
     font-weight: 900;
+    cursor: pointer;
 }
 
 #bag{
@@ -222,10 +215,12 @@
 /* footer-bar */
 
 .footer-bar{
-    height: 150px;
+    /* height: 150px; */
     width: 100%;
     background-color: #222e50;
     border-top: 5px solid white !important;
+    /* margin-bottom: 15px; */
+    padding-bottom: 15px;
 }
 
 .footer-about
@@ -239,4 +234,78 @@
     background-color: #111729;
     font-size: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+@media screen {
+
+    @media (max-width: 1100px)
+    {
+    .body-kesar{
+        width: 80%;
+    }
+
+    .body-paghadi{
+        width: 80%;
+    }
+
+    .body-vrundavan{
+        width: 80%;
+    }
+    .header-bar{
+        justify-content: space-evenly;
+    }
+
+    .nav-logo img{
+
+    }
+    
+    #line{
+        border-bottom: 5px solid #bcdbc1;
+    border-radius: 5px;
+    display: inline;
+    margin-left: 16px;
+    }
+    .nav-name{
+        width: 45%;
+
+    }
+    .nav-name .name{
+        font-size: 34px;
+    }
+
+    .location{
+        font-size: 0.7rem;
+    }
+}
+@media (max-width:610px){
+  .body #bag-width, #bag , #bag-price{
+        font-size: 2rem;
+  }
+  .kg50, .kg60{
+    height: 14vh;
+  }
+
+  .body-kesar, .body-paghadi, .body-vrundavan{
+    height: 76vh;
+    width: 300px;
+  }
+  
+
+
+  .nav-name{
+    width: 100px;
+  }
+
+  #line{
+    font-size: 20px;
+  }
+
+  .location{
+    font-size: 5px;
+  }
+
+  
+}
+
 }
