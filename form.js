@@ -1,16 +1,11 @@
-let not_a_number1 = document.querySelector("#nan2");
+function checkNumber() {
+    // Get user input
+    var userInput = document.getElementById('nan2').value;
 
-// function number2(){
-//     if(!Number(not_a_number1)){
-//         document.getElementById("mag-nan2").innerHTML = "Enter Only Number";        
-//     }
-//     else{
-//         document.getElementById("mag-nan2").innerHTML 
-//     }
-// }
-
-function number () {
-    if(!Number(not_a_number1)){
-        document.querySelector("#msg-nan").innerHTML = "Enter Only Number";
+    // Check if it's a number
+    if (!isNaN(userInput)) {
+        console.log(document.getElementById('nan2').value)
+    } else {
+        document.getElementById('msg-nan').innerText =  'Enter Only Number After Refresh';
     }
 }
