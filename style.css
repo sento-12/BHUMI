@@ -358,3 +358,42 @@
 }
 
 }
+
+
+
+/* rate */
+.ditail{
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    background-color: #4a8d9b;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: space-evenly;
+}
+
+.rate{
+    width: 100%;
+    display: none;
+    text-align: center;
+
+}
+.sugar-50kg{
+    margin-top: 10px;
+}
+b{
+    padding-left: 100px;
+}
+
+.digital-bag50kg{
+    padding-left: 123px;
+}
+
+.rate-background-1{
+    background-color: #cdc184 ;
+}
+
+.rate-background-2{
+    background-color: #5da896; 
+}
