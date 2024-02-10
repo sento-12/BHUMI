@@ -15,7 +15,8 @@ document.querySelector(".changeConform").addEventListener("click", e =>{
         
         document.querySelector(".change").style.display = "none";
     }else{
-        console.log("rong");
+
+       alert("rong password")
     }
 
 })
