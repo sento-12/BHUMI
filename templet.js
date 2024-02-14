@@ -17,3 +17,4 @@ localStorage.getItem("marko");
 
 document.getElementById("PANcard").innerHTML = 
 localStorage.getItem("PANcard");
+
