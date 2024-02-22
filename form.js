@@ -35,6 +35,34 @@ function checkNumber() {
     console.log(name , gstNumber , city , marko);
 }
 
+document.getElementById("symbol").addEventListener("click", () => {
+    let symbol = document.getElementById("symbol").value;
+    document.querySelector("#symbol").innerHTML = `<div class="main-Categries">
+          
+    <div id="size">
+      <div class="input-box">
+        <!-- <span class="details">GST Number</span> -->
+        <input type="text" placeholder="Exp-keser gold" class="deta" id="notmt" required><br>
+        <span id="mag-mt" class="mag"></span>
+      </div> 
+
+       <div class="input-box">
+      
+        <select placeholder="Confirm your password" id="box1" required>
+          <option>50 kg</option>
+          <option>60 kg</option>
+          
+        </select>
+      </div>
+      
+      
+      <div class="input-box">
+        <!-- <span class="details">GST Number</span> -->
+        <input type="text" placeholder="exe bag"class="deta"  id="nan2" ><br>
+        <span id="msg-nan" class="mag"></span>
+      </div>
+    </div>`;
+});
 
  console.log("--------- this working... -->");
 

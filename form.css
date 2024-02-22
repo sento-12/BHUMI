@@ -219,3 +219,19 @@ form .submit:hover {
   z-index: 10;
   background-color: red;
 }
+
+.main-Categries{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#symbol {
+  display: flex;
+  justify-content:end;
+  align-items: row;
+  /* font-size: 70px; */
+  margin-right: 70px;
+  cursor: pointer;
+}
+
