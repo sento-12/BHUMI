@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../project-1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "BHUMI"
+	}
+}
