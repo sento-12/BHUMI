@@ -192,6 +192,21 @@ form .submit:hover {
   font-weight: 500;
 }
 
+
+.main-Categries{
+  display: flex;
+
+  flex-wrap: wrap;
+}
+
+ .item-part input{
+  padding: 0 50px;
+}
+
+.add-item{
+ 
+}
+
 .deta {
   padding: 20px;
   margin: 5px;
