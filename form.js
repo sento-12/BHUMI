@@ -1,8 +1,13 @@
 
 document.querySelector(".submit").addEventListener("click", ()=> {
-  // Get user input
+    // Get user input and return flase value
+    document.querySelectorAll("input[type=text]").forEach(e => {
+      if(e.value === ""){
+        console.log(e.value + "please file this input");
+        return false;
+      }
+    })
   var userInput = document.getElementById("bag").value;
-
   // Check if it's a number
   if (!isNaN(userInput)) {
     console.log(document.getElementById("bag").value);
@@ -11,18 +16,38 @@ document.querySelector(".submit").addEventListener("click", ()=> {
       "Enter Only Number After Refresh";
   }
 
-
   let party = document.querySelector("#partyName").value;
   let gst = document.querySelector("#gstNumber").value;
   let pancard = document.querySelector("#PANcard").value;
   let phone = document.querySelector("#phoneNumber").value;
   let city = document.querySelector("#city").value;
 
-  let bag = document.querySelector("#bag").value;
-  let wieght = document.querySelector("#box1").value;
-  let brand = document.querySelector("#brand").value;
-  let price = document.querySelector("#price").value;
-  // console.log(name.value, gst, pancard, phone, city, bag, wieght, brand,price)
+
+  // // console.log(name.value, gst, pancard, phone, city, bag, wieght, brand,price)
+  // var bag, wieght, brand;
+  let itemType = document.querySelector(".main-Categries").children
+  let item = [];
+ Array.from(itemType).map(e => {
+    
+   
+   item.push({
+     bag : e.querySelector("#bag").value,
+     wieght : e.querySelector("#box1").value,
+     brand : e.querySelector("#brand").value,
+     price : e.querySelector("#price").value
+    })
+  });
+
+
+  console.log(item);
+  let date = new Date();
+ 
+  let d = date.getDate();
+  let m = date.getMonth();
+  let y = date.getFullYear();
+ 
+  let time = `${d} / ${m+1} / ${y}`
+
 
  var obj = {
   "party" : party,
@@ -30,20 +55,23 @@ document.querySelector(".submit").addEventListener("click", ()=> {
   "pancard" : pancard,
   "phone" : phone,
   "city" : city,
-  "bag" : bag,
-  "wieght" : wieght,
-  "brand" : brand,
-  "price" : price
+  "item" : item
  }
+ console.log(obj);
 
-
+ 
+ //send data to server
  fetch("http://127.0.0.1:3000/data", {
-  method : "POSt",
-  headers : {
-    "Content-type" : "application/json"
-  },
-  body: JSON.stringify(obj)
- })
+   method : "POSt",
+   headers : {
+     "Content-type" : "application/json"
+    },
+    body: JSON.stringify(obj)
+  })
+  
+  
+  console.log(time);
+
 })
 
 

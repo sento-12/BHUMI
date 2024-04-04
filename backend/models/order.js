@@ -6,11 +6,7 @@ const orderSchema = new mongoose.Schema({
   pancard: String,
   phone: String,
   city: String,
-  bag: [String],
-  wieght: [String],
-  brand: [String],
-  price: [String],
+  item : Array,
 });
-
 const Order = mongoose.model("order", orderSchema);
 module.exports = Order;

@@ -154,20 +154,103 @@
 }
 
 
+/* change for price */
+
+#side-bar{
+  position: absolute;
+  padding: 10px;
+  height: 90%;
+  display: flex;
+  width: 260px;
+  border-radius: 10px;
+  border : 2px solid black;
+  top: 5px;
+  margin: 10px;
+  background-color: #273458;
+  flex-direction: column;
+  left: -300px;
+  transition: all 0.5s ease-in;
+}
+
+#side-bar .cross i{
+  position: relative;
+  color: white;
+  cursor: pointer;
+}
+
+#side-bar .cross{
+  display: flex;
+    justify-content: end;
+    font-size: 35px;
+    position: absolute;
+    top: 13px;
+    right: 18px;
+  }
+  
+  .side-header{
+    display: flex;
+    width: 99%;
+    color: white;
+    font-size: 23px;
+    gap: 10px;
+  }
+  
+  .side-header i{
+    font-size: 30px;
+  }
+  
+  .admin{
+    color: white;
+    /* border: 2px solid black; */
+  padding: 5px;
+  position: relative;
+  top: 25px;
+  font-size: 23px;
+  cursor: pointer;
+  animation : all 3s ease-in;
+}
+
+.admin-bar{
+  display: flex;
+  padding: 10px;
+}
+
+.admin a{
+  text-decoration: none;
+  color: white;
+}
+
+.admin :hover{
+  border-radius: 8px;
+  background-color: #00000047;
+}
+
+
+/* option */
+
+#option{
+  position: absolute;
+  top: 10px;
+  font-size: 30px;
+  margin-left: 10px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
 @media screen {
-
-    @media (max-width: 1100px)
-    {
+  
+  @media (max-width: 1100px)
+  {
     .body-kesar{
-        width: 80%;
+      width: 80%;
     }
-
+    
     .body-paghadi{
-        width: 80%;
+      width: 80%;
     }
-
+    
     .body-vrundavan{
-        width: 80%;
+      width: 80%;
     }
     .header-bar{
         justify-content: space-evenly;

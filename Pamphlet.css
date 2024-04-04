@@ -1,23 +1,23 @@
 *{
     margin: 0px;
     font-family: arial;
-    /* background-color: antiquewhite; */
+    border: border-box;
 }
 
 .contanier {
     margin: 0px;
     padding: 0px;
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     display: inline-block;
     justify-content: center;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     /* background-color: antiquewhite; */
 }
 
 .box1{
     width: 100%;
-    height: 300px;
+    min-height: 208px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -55,7 +55,7 @@
 #add{
     width: 100%;
     height: 100px;
-    margin-top: 75px;
+    margin-top: 43px;
     /* margin-right: 10%; */
     display: inline-block;
     justify-content: space-evenly;
@@ -66,34 +66,29 @@
 }
 
 .box2{
-    width: 100%;
+    width: 99.5%;
     height: 500px;
-    display: inline-blocks; 
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     /* margin-bottom: 10px; */
 }
 
 
 
-#headbox2{
-    margin-left: 73%;
-
-}
-
 #headbox1{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0 5px 0 5px;
     align-items: center;
     margin-top: 10px;
 } 
 
 .row{
-    width: 100%;
-    height: 300px;
+    width: 99%;
+    height: 250px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -104,22 +99,36 @@
     width: 300px;
     height: 200px;
     line-height: 1.35rem;
-    margin-left: 25%;
+    /* margin-left: 25%; */
     border: 2px solid black;
+    padding: 5px;
 }
 
 #head1{
-    margin-left: 65%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 #head2{
-    margin-left: 66%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 #buyer1{
+    padding: 5px;
     width: 400px;
     height: 200px;
     line-height: 1.35rem;
-    margin-left: 25%;
+    /* margin-left: 25%; */
     border: 2px solid black;
+}
+
+.info{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-left: 3px;
+    font-style: italic;
 }
 
 #table{
@@ -141,64 +150,87 @@
     padding-left:11%;
 }
 
-.box3{
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    justify-content: space-evenly;
-    align-items: center;
-    border: 2px solid black;
-    /* margin-bottom: 25px; */
-} 
+.item-detail{
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /* text-decoration: underline; */
+    background-color: rgba(123, 225, 191, 0.454);
+}
 
+.item-coulam{
+    /* min-width: 100%; */
+    display: flex;
+    text-decoration: none;
+    justify-content: space-around;
+    min-height: 15px;
+    font-weight: bold;
+    margin: 5px;
+    border: 2px solid  black;
+    padding-left: 20px;
+}
+
+.item-coulam div{
+    text-decoration: none;
+}
+
+
+.item{
+
+    display: flex;
+    text-decoration: none;
+    justify-content: space-around;
+    min-height: 15px;
+    margin: 5px;
+ 
+}
+
+.box3{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+} 
+ 
 span{
     width: 100%;
-    height: 100px;
-    /* border: 2px solid black; */ 
-} 
+}   
 
-
-
-/* p{
-    border: 2px solid black; 
-} */
 
 .box4{
-    width: 100%;
-    height: 300px;
+    min-width: 100%;
+    height: 40px;
     display: flex;
     justify-content: space-evenly;
     align-items: center; 
-    /* margin-left: 40px; */
-    /* border: 2px solid black; */
-    /* margin-bottom: 25px; */
+    
 }
 
 .stamp{
-    /* margin-left: 10px; */
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 }
 
 #sign1{
-    width: 300px;
-    height: 250px;
-    /* border: 2px solid black; */
-    /* font-weight: 2rem; */
+    min-width: 300px;
+    min-height: 250px;
+ 
 }
 
 
 #sign2{
-    width: 300px;
-    height: 250px;
-    /* border: 2px solid black; */
+    min-width: 300px;
+    min-height: 250px;
+ 
 }
 
 
 #sign3{
     width: 300px;
     height: 250px;
-    /* border: 2px solid black; */
+   
 }
