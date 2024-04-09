@@ -22,18 +22,9 @@ app.get('/getData', (req, res) => {
     Order.find().sort({_id:-1}).limit(1)
     .then(order => res.json(order))
     .catch(err => res.json(err))
-
-    
 });
 
 
-app.get('/getAllData', (req, res) => {
-  Order.find()
-  .then(order => res.json(order))
-  .catch(err => res.json(err))
-
-  console.log(data)
-});
 
 
 

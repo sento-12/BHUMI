@@ -58,19 +58,30 @@ document.querySelector(".submit").addEventListener("click", ()=> {
   "item" : item
  }
  console.log(obj);
+ let flag = 0
 
- 
+
+ //check the value is not a empty empty string value";
+ let input = document.getElementsByTagName("input")
+  Array.from(input).map(e =>{
+  console.log(e);
+  if(e.value == ''){
+    flag = 1;
+  }
+ })
+
  //send data to server
- fetch("http://127.0.0.1:3000/data", {
-   method : "POSt",
-   headers : {
-     "Content-type" : "application/json"
-    },
-    body: JSON.stringify(obj)
-  })
+ if(flag==0){
+   fetch("http://127.0.0.1:3000/data", {
+     method : "POST",
+     headers : {
+       "Content-type" : "application/json"
+      },
+      body: JSON.stringify(obj)
+    })
+    console.log(time);
   
-  
-  console.log(time);
+ }
 
 })
 
