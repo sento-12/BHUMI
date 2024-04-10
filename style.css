@@ -166,7 +166,7 @@
 #side-bar {
   position: absolute;
   padding: 10px;
-  height: 90%;
+  height: 100vh;
   display: flex;
   width: 260px;
   border-radius: 10px;
