@@ -87,7 +87,7 @@
   border-top: 5px solid white !important;
   /* margin-bottom: 15px; */
   padding-bottom: 15px;
-  margin-top: -29vw;
+  margin-top: -23vw;
 }
 
 
@@ -590,13 +590,43 @@ img {
 @media (max-width: 1400px) {
   /* Kesar Gold */
 
-
-  .rate{
-    flex-direction: column;
-    gap: 3px;
-    background-color: #f0e8efd1;
+  
+  .contener1{
+    top: -33vw;
   }
 
+  .back2{
+    top : 12vw;
+  }
+
+  .contener2{
+    top: -15vw;
+  }
+
+  #rat_padadi{
+    top: -4vw;
+  }
+
+  .img3{
+    top: -2vw;
+  }
+
+  #cont4{
+    top: -29vw;
+  }
+
+  #rate_var{
+    top: -19vw;
+  }
+
+  .footer-bar{
+    margin-top: -18vw;
+  }
+
+
+  .rate{
+    top: -21vw;
+  }
   .rate-50kg{
     width: 80%;
   }
@@ -607,25 +637,52 @@ img {
   }
 
   /* Padhadi */
-  .rate_padhadi{
-    flex-direction: column;
-    gap: 3px;
-  }
 
-  .rate_padhadi{
-    background-color: #cff0cf;
-  }
+}
 
-  /* Vrundavan */
-  #bg-var{
-    background-color: #d3eaf3;
-  }
+@media(max-width: 1000px) {
+ .rate{
+  flex-direction: column;
+ } 
+ .rate-50kg{
+  width: 80%;
+}
+
+.rate-60kg
+{
+  width: 80%;
+}
+
+/* Padhadi */
+.rate_padhadi{
+  flex-direction: column;
+  gap: 3px;
+}
+
+
+
 }
 
 @media (max-width: 605px)
 {
+  /* UNdisplay Photo Of KEasr-gold ,Padhadi  and Varundavan */
+
+  .back-right{
+    display: none;
+  }
+
+  .back-right-padhadi{
+    display: none;
+  }
+
+  .back-left-padhadi{
+    display: none;
+  }
+
+
   .rate{
     width: 105%;
+
   }
 
   .rate_padhadi
@@ -663,4 +720,17 @@ img {
     font-size: 26px;
   }
 }
+
+
+@media(max-width: 290px)
+{
+  .name-sugar{
+    font-size: 14px;
+  }
+
+  .rate-sugar{
+    font-size: 19px;
+  }
+}
+
 
