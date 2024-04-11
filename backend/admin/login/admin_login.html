@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="admin.css">
+  <script src="https://kit.fontawesome.com/b4761c8186.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form action="../pannel/admin_pannel.html">
+
+        <div class="container">
+            <i class="fa-solid fa-circle-user"></i>
+            <input type="text" id="username" placeholder="Username">
+            <div id="err-user" style="color: red;"></div>
+            <input type="password" id="password" placeholder="Password">
+            <div id="err-pass" style="color: red;"></div>
+            <button id="loginBtn"  onclick="return(check())">Login</button>
+        </div>
+        
+    </form>
+  <script>
+    function check(){
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username.trim() === '') {
+        document.getElementById("err-user").innerHTML = 'Username cannot be empty';
+    return false;
+  }else{
+    document.getElementById("err-user").innerHTML = '';
+  }
+  if(username !== 'admin'){
+      document.getElementById("err-user").innerHTML = 'Enter correct username';
+      return false;
+    }else{
+        document.getElementById("err-user").innerHTML = ' ';    
+    }
+  
+  
+  //validation
+    
+    if (password.trim() === '') {
+      document.getElementById("err-pass").innerHTML = 'Password cannot be empty';
+      return false;
+    }else{
+      document.getElementById("err-pass").innerHTML = '';
+    }
+  if(password !== 'bhumi@123'){
+    document.getElementById("err-pass").innerHTML = 'enter correect password'; 
+    return false;
+  }else{
+    document.getElementById("err-pass").innerHTML = '';
+  }
+    }
+  </script>
+</body>
+</html>
