@@ -87,10 +87,11 @@
   /* height: 150px; */
   width: 100%;
   background-color: #222e50;
-  border-top: 5px solid white !important;
+  border-top: 5px solid white ;
   /* margin-bottom: 15px; */
   padding-bottom: 15px;
-  margin-top: -29vw;
+  align-self: flex-end;
+  /* margin-top: -29vw; */
 /* >>>>>>> 46c948520284485b32088a8adec239d85eb8b904 */
 }
 
@@ -313,6 +314,7 @@ img {
   border-radius: 15px;
   z-index: 1px;
   opacity: 1;
+  background-color: rgba(255, 255, 255, 0.641);
 }
 
 
@@ -336,6 +338,8 @@ img {
   height: 45%;
   border: 3px solid #c135afd1;
   border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.641);
+
 }
 
 
@@ -396,6 +400,8 @@ img {
   border-radius: 15px;
   z-index: 1px;
   opacity: 1;
+  background-color: rgba(255, 255, 255, 0.641);
+
 }
 
 .rate-60kg_padhadi {
@@ -403,6 +409,8 @@ img {
   height: 40%;
   border: 3px solid #35c14fd1;
   border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.641);
+
 }
 
 /* Varundavan */
@@ -427,6 +435,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  background-color: rgba(255, 255, 255, 0.641);
+
 }
 
 .name-sugar {
@@ -436,12 +446,14 @@ img {
   left: 9px;
   gap: 0px;
   opacity: 0px;
-  font-family: Palanquin Dark;
+font-family: "Patua One", serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 65.2px;
   text-align: left;
   color: #FF0000;
+  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.641);
 
 }
 
@@ -456,6 +468,45 @@ img {
   color: #FF0000;
 
 }
+
+.order{
+  display: flex; 
+  width: 100%;
+  justify-content: center; 
+  align-items: center;
+}
+
+
+
+/* button */
+/* Styles for the button */
+#orderButton {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  #orderButton {
+    font-size: 14px;
+  }
+  .fotter{
+    position: relative;
+    bottom : -171vw
+
+  }
+}
+
 
 ._60kg {
   display: flex;
@@ -607,7 +658,7 @@ img {
   }
 
   .contener2{
-    top: -15vw;
+    top: -20vw;
   }
 
   #rat_padadi{
@@ -618,18 +669,19 @@ img {
     top: -2vw;
   }
 
-  #cont4{
+  /* #cont4{
     top: -29vw;
-  }
+  } */
 
   #rate_var{
     top: -19vw;
   }
 
-  .footer-bar{
-    margin-top: -18vw;
-  }
+  .fotter{
+    position: relative;
+    bottom : -50vw
 
+  }  
 
   .rate{
     top: -21vw;
@@ -647,12 +699,27 @@ img {
 
 }
 
+@media(max-width:1170px){
+  .fotter{
+    position: relative;
+    bottom : -58vw
+
+  } 
+
+  .location{
+    font-size: 15px
+  }}
+
 @media(max-width: 1000px) {
  .rate{
   flex-direction: column;
  } 
  .rate-50kg{
   width: 80%;
+}
+
+.location{
+  font-size: 15px
 }
 
 .rate-60kg
@@ -662,20 +729,57 @@ img {
 
 /* Padhadi */
 .rate_padhadi{
+  display: flex;
   flex-direction: column;
   gap: 3px;
 }
+.fotter{
+  position: relative;
+  bottom : -100vw
 
+}
 
 
 }
 
-@media (max-width: 605px)
+@media(max-width : 850px){
+  .fotter{
+    position: relative;
+    bottom : -115vw
+
+  }
+  .location{
+    font-size: 15px
+  }
+  
+}
+
+@media(max-width : 790px){
+  .fotter{
+    position: relative;
+    bottom : -121vw
+
+  }
+  
+}
+
+@media(max-width : 725px){
+  .fotter{
+    position: relative;
+    bottom : -130vw
+
+  }
+  
+}
+@media (max-width: 620px)
 {
   /* UNdisplay Photo Of KEasr-gold ,Padhadi  and Varundavan */
 
   .back-right{
     display: none;
+  }
+  .location{
+    font-size: 15px
   }
 
   .back-right-padhadi{
@@ -750,6 +854,11 @@ img {
   top: -28vw;
 }
 
+.fotter{
+  position: relative;
+  bottom : -142vw
+
+}
 .footer-bar{
   width: 105%;
 }
@@ -757,7 +866,48 @@ img {
 
 }
 
-@media(max-width: 400px)
+@media(max-width : 535px){
+  .fotter{
+    position: relative;
+    bottom : -161vw
+
+  }
+  
+}
+
+@media(max-width : 470px){
+  .fotter{
+    position: relative;
+    bottom : -171vw
+
+  }
+  
+}
+
+
+@media(max-width : 435px){
+  .fotter{
+    position: relative;
+    bottom : -178vw
+
+  }
+
+  .location{
+    font-size: 15px
+  }
+  
+}
+
+
+@media(max-width : 405px){
+  .fotter{
+    position: relative;
+    bottom : -171vw
+
+  }
+  
+}
+@media(max-width: 410px)
 {
   .rate{
     width: 105%;
@@ -770,9 +920,26 @@ img {
 
 
   .name-sugar{
-    font-size: 18px;
+    font-size: 19px;
   }
 
+  .rate-sugar{
+    font-size: 27px;
+  }
+
+  .fotter{
+    position: relative;
+    bottom : -200vw
+
+  }
+  
+  .location{
+    font-size: 15px
+  }
+
+}
+
+@media(max-width: 367px){
   .rate-sugar{
     font-size: 26px;
   }
@@ -804,9 +971,9 @@ img {
     height: 95px;
   }
 
-  .footer-bar {
+  /* .footer-bar {
     margin-top: -23vw;
-  }
+  } */
 }
 
 

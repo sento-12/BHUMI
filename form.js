@@ -62,8 +62,9 @@ document.querySelector(".submit").addEventListener("click", ()=> {
 
 
  //check the value is not a empty empty string value";
- let input = document.getElementsByTagName("input")
-  Array.from(input).map(e =>{
+ let input = document.getElementsByClassName("valid")
+console.log(input)
+ Array.from(input).map(e =>{
   console.log(e);
   if(e.value == ''){
     flag = 1;
@@ -78,12 +79,13 @@ document.querySelector(".submit").addEventListener("click", ()=> {
        "Content-type" : "application/json"
       },
       body: JSON.stringify(obj)
-    })
+    })  
     console.log(time);
+  }
   
- }
-
+  fetch("http://127.0.0.1:3000/email");    
 })
+
 
 
 let html = `
@@ -91,7 +93,7 @@ let html = `
           
 <div id="size">
 <div class="input-box">
-  <span > BAG</span>
+  <span > BAG</span> 
   <input type="text" placeholder="exe bag"class="deta"  id="bag" required ><br>
   <span id="msg-nan" class="mag"></span>
 </div>
