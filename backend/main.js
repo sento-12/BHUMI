@@ -3,9 +3,13 @@ const app = express();
 const port = 3000;
 const cors = require("cors");
 const { default: mongoose } = require("mongoose");
-const Price = require("./models/price");
 const sendMail = require("./controllers/sendMail");
-const jwt = require("jsonwebtoken");
+const Price = require("./models/price")
+const passport = require("./auth");
+require('dotenv').config();
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 //order api call and get data parts
 const Order = require("./models/order");
@@ -31,25 +35,31 @@ app.get("/getData", (req, res) => {
     .catch((err) => res.json(err));
 });
 
-//price api call and get data parts
 
-app.post("/price", async (req, res) => {
-  console.log(req.body);
-  await Price.updateMany({}, req.body).then(() => {
-    res.send("hello my dear this is work--++");
-  });
-});
+//get price data base api 
+app.get("/getPrice", (req, res) => {  
 
-app.get("/getPrice", (req, res) => {
   Price.find()
-    .then((price) => res.json(price))
-    .catch((err) => res.json(err));
-});
+  .then((price) => res.json(price))
+  .catch((err) => res.json(err));
+   console.log("get price data")
+  });
 
-// view admin pannel price api call and get data parts
 
 //email using node mmailer service
 app.get("/email", sendMail);
+
+
+const adminRoutes = require("./routes/adminRoutes")
+// admin pannale api call and get data parts
+
+
+app.use(passport.initialize());
+const localAuthMiddleware = passport.authenticate('local', {session: false})
+
+
+
+app.use('/admin', adminRoutes);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

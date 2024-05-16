@@ -1,9 +1,9 @@
 const formData = {};
-function submit() {
+function submit(){
   const sections = document.querySelectorAll("section");
-
+  alert("work")
   // Define an empty object to store values
-  let flag = false;
+  let flag = true;
 
   //CHECK all element is not empty
   sections.forEach((section) => {
@@ -12,15 +12,15 @@ function submit() {
     const inputs = section.querySelectorAll(".input");
 
     inputs.forEach((input) => {
-      if (input.value.trim() === "") {
-        flag = true;
+      if (input.value === "") {
+        flag = false;
       }
     });
   });
   console.log("Flag: " + flag);
   
   // Define an empty object to store values
-  if (flag == false) {
+  if (flag === true) {
     sections.forEach((section) => {
       const sectionId = section.id;
       formData[sectionId] = {};
@@ -32,15 +32,18 @@ function submit() {
     });
 });
 console.log(flag);
+console.log(formData);
 // send data funtion to server
 sendData()
+
+// window.location.href = "http://127.0.0.1:5500/index.html";
 }
 }
 
 
 
 function sendData() {
-    fetch("http://127.0.0.1:3000/price", {
+    fetch("http://127.0.0.1:3000/admin/price", {
      method : "POST",
      headers : {
        "Content-type" : "application/json"
