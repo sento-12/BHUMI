@@ -81,9 +81,9 @@ console.log(input)
       body: JSON.stringify(obj)
     })  
     console.log(time);
+    fetch("http://127.0.0.1:3000/email");    
   }
   
-  fetch("http://127.0.0.1:3000/email");    
 })
 
 
