@@ -86,7 +86,7 @@ const sendMail = async (req, res) => {
 
       const info = {
         from: '"ORDER" <sentobirl@gmail.com>', // sender address
-        to: "info.bhumiindustries@gmail.com", // list of receivers
+        to: "sentobirl@gmail.com", // list of receivers "info.bhumiindustries@gmail.com"
         subject: `Order By ${subject}`, // Subject line
         text: "Hello world?", // plain text body
         html: formating()        // html body

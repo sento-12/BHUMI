@@ -58,6 +58,10 @@ app.use(passport.initialize());
 const localAuthMiddleware = passport.authenticate('local', {session: false})
 
 
+//WHATSAPP messenger api call and get data parts
+
+const whatsapp = require("./controllers/sendWhatsapp")
+app.get("/whatsapp", whatsapp)
 
 app.use('/admin', adminRoutes);
 

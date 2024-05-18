@@ -1,0 +1,2 @@
+#ingnore all .env file
+*.env

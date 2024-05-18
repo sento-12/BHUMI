@@ -59,11 +59,11 @@ router.post('/login', async (req, res) =>{
         username: user.username
     }
     const token = generateToken(payload);
-
+    // console.log(token)
   //  res.cookie('token', token)
-  res.redirect("/admin/pannel")
-  // return res.status(200)
-  // .json({token, payload})
+  // res.redirect("/admin/pannel")
+  return res.status(200)
+  .json({token, payload})
   
   
 }catch(err){  
