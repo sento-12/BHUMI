@@ -130,3 +130,6 @@ document.querySelector(".symbol").addEventListener("click", () => {
 console.log("--------- this working... -->");
 
 
+
+
+

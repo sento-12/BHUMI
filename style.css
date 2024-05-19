@@ -87,12 +87,12 @@
   /* height: 150px; */
   width: 100%;
   background-color: #222e50;
-  border-top: 5px solid white ;
+  border-top: 5px solid white;
   /* margin-bottom: 15px; */
   padding-bottom: 15px;
   align-self: flex-end;
   /* margin-top: -29vw; */
-/* >>>>>>> 46c948520284485b32088a8adec239d85eb8b904 */
+  /* >>>>>>> 46c948520284485b32088a8adec239d85eb8b904 */
 }
 
 
@@ -272,7 +272,7 @@ img {
   justify-content: space-evenly;
   align-items: center;
   position: relative;
-  top: -44vw;
+  top: -41vw;
   z-index: 1;
 }
 
@@ -329,8 +329,9 @@ img {
   font-size: 33px;
   font-weight: 700;
   line-height: 39.57px;
- 
+
 }
+
 /* rate OF Kesar Gold 60kg */
 
 .rate-60kg {
@@ -361,7 +362,7 @@ img {
   justify-content: space-evenly;
   align-items: center;
   position: relative;
-  top: -39vw;
+  top: -37vw;
   z-index: 1;
 }
 
@@ -446,7 +447,7 @@ img {
   left: 9px;
   gap: 0px;
   opacity: 0px;
-font-family: "Patua One", serif;
+  font-family: "Patua One", serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 65.2px;
@@ -469,10 +470,10 @@ font-family: "Patua One", serif;
 
 }
 
-.order{
-  display: flex; 
+.order {
+  display: flex;
   width: 100%;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
 
@@ -481,7 +482,8 @@ font-family: "Patua One", serif;
 /* button */
 /* Styles for the button */
 #orderButton {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
+  /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -500,10 +502,10 @@ font-family: "Patua One", serif;
   #orderButton {
     font-size: 14px;
   }
-  .fotter{
-    position: relative;
-    bottom : -171vw
 
+  .fotter {
+    position: relative;
+    bottom: -171vw
   }
 }
 
@@ -648,24 +650,24 @@ font-family: "Patua One", serif;
 @media (max-width: 1400px) {
   /* Kesar Gold */
 
-  
-  .contener1{
+
+  .contener1 {
     top: -33vw;
   }
 
-  .back2{
-    top : 12vw;
+  .back2 {
+    top: 12vw;
   }
 
-  .contener2{
+  .contener2 {
     top: -20vw;
   }
 
-  #rat_padadi{
+  #rat_padadi {
     top: -4vw;
   }
 
-  .img3{
+  .img3 {
     top: -2vw;
   }
 
@@ -673,159 +675,161 @@ font-family: "Patua One", serif;
     top: -29vw;
   } */
 
-  #rate_var{
+  #rate_var {
     top: -19vw;
   }
 
-  .fotter{
+  .fotter {
     position: relative;
-    bottom : -50vw
+    bottom: -50vw
+  }
 
-  }  
-
-  .rate{
+  .rate {
     top: -21vw;
   }
-  .rate-50kg{
+
+  .rate-50kg {
     width: 80%;
   }
 
-  .rate-60kg
-  {
+  .rate-60kg {
     width: 80%;
+  }
+
+
+  #cont4 {
+    top: -31vw;
   }
 
   /* Padhadi */
 
 }
 
-@media(max-width:1170px){
-  .fotter{
+@media(max-width:1170px) {
+  .fotter {
     position: relative;
-    bottom : -58vw
+    bottom: -58vw
+  }
 
-  } 
-
-  .location{
+  .location {
     font-size: 15px
-  }}
+  }
+}
 
 @media(max-width: 1000px) {
- .rate{
-  flex-direction: column;
- } 
- .rate-50kg{
-  width: 80%;
-}
-
-.location{
-  font-size: 15px
-}
-
-.rate-60kg
-{
-  width: 80%;
-}
-
-/* Padhadi */
-.rate_padhadi{
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-.fotter{
-  position: relative;
-  bottom : -100vw
-
-}
-
-
-}
-
-@media(max-width : 850px){
-  .fotter{
-    position: relative;
-    bottom : -115vw
-
+  .rate {
+    flex-direction: column;
   }
-  .location{
+
+  .rate-50kg {
+    width: 80%;
+  }
+
+  .location {
     font-size: 15px
   }
-  
-}
 
-@media(max-width : 790px){
-  .fotter{
-    position: relative;
-    bottom : -121vw
-
+  .rate-60kg {
+    width: 80%;
   }
-  
-}
 
-@media(max-width : 725px){
-  .fotter{
-    position: relative;
-    bottom : -130vw
-
+  /* Padhadi */
+  .rate_padhadi {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
   }
-  
+
+  .fotter {
+    position: relative;
+    bottom: -100vw
+  }
+
+
 }
-@media (max-width: 620px)
-{
+
+@media(max-width : 850px) {
+  .fotter {
+    position: relative;
+    bottom: -115vw
+  }
+
+  .location {
+    font-size: 15px
+  }
+
+}
+
+@media(max-width : 790px) {
+  .fotter {
+    position: relative;
+    bottom: -121vw
+  }
+
+}
+
+@media(max-width : 725px) {
+  .fotter {
+    position: relative;
+    bottom: -130vw
+  }
+
+}
+
+@media (max-width: 620px) {
   /* UNdisplay Photo Of KEasr-gold ,Padhadi  and Varundavan */
 
-  .back-right{
+  .back-right {
     display: none;
   }
-  .location{
+
+  .location {
     font-size: 15px
   }
 
-  .back-right-padhadi{
+  .back-right-padhadi {
     display: none;
   }
 
-  .back-left-padhadi{
+  .back-left-padhadi {
     display: none;
   }
 
 
-  .rate{
+  .rate {
     width: 105%;
 
   }
 
-  .rate_padhadi
-  {
+  .rate_padhadi {
     width: 105%;
   }
 
 
-  .name-sugar{
+  .name-sugar {
     font-size: 20px;
   }
 
-  .rate-sugar{
+  .rate-sugar {
     font-size: 29px;
   }
 
 
   /* Update IF Width Of Leable */
 
-  .header-bar{
+  .header-bar {
     width: 105%;
   }
 
-  .back img{
+  .back img {
     width: 105%;
   }
 
-  .back2 img{
+  .back2 img {
     width: 105%;
   }
 
-  .back3 img{
+  .back3 img {
     width: 105%;
   }
 
@@ -835,139 +839,141 @@ font-family: "Patua One", serif;
 
   #rat_padadi {
     top: -13vw;
-}
+  }
 
   .contener1 {
     top: -43vw;
-}
-
-
-.contener2 {
-  top: -20vw;
-}
-
-#cont4 {
-  top: -42vw;
-}
-
-#rate_var {
-  top: -28vw;
-}
-
-.fotter{
-  position: relative;
-  bottom : -142vw
-
-}
-.footer-bar{
-  width: 105%;
-}
-
-
-}
-
-@media(max-width : 535px){
-  .fotter{
-    position: relative;
-    bottom : -161vw
-
-  }
-  
-}
-
-@media(max-width : 470px){
-  .fotter{
-    position: relative;
-    bottom : -171vw
-
-  }
-  
-}
-
-
-@media(max-width : 435px){
-  .fotter{
-    position: relative;
-    bottom : -178vw
-
   }
 
-  .location{
+
+  .contener2 {
+    top: -20vw;
+  }
+
+  #cont4 {
+    top: -42vw;
+  }
+
+  #rate_var {
+    top: -28vw;
+  }
+
+  .fotter {
+    position: relative;
+    bottom: -142vw
+  }
+
+  .footer-bar {
+    width: 105%;
+  }
+
+
+}
+
+@media(max-width : 535px) {
+  .fotter {
+    position: relative;
+    bottom: -161vw
+  }
+
+}
+
+@media(max-width : 470px) {
+  .fotter {
+    position: relative;
+    bottom: -171vw
+  }
+
+}
+
+
+@media(max-width : 435px) {
+  .fotter {
+    position: relative;
+    bottom: -178vw
+  }
+
+  .location {
     font-size: 15px
   }
-  
+
 }
 
 
-@media(max-width : 405px){
-  .fotter{
+@media(max-width : 405px) {
+  .fotter {
     position: relative;
-    bottom : -171vw
-
+    bottom: -171vw
   }
-  
+
 }
-@media(max-width: 410px)
-{
-  .rate{
+
+@media(max-width: 410px) {
+  .rate {
     width: 105%;
   }
 
-  .rate_padhadi
-  {
+  .rate_padhadi {
     width: 105%;
   }
 
 
-  .name-sugar{
+  .name-sugar {
     font-size: 19px;
   }
 
-  .rate-sugar{
+  .rate-sugar {
     font-size: 27px;
   }
 
-  .fotter{
+  .fotter {
     position: relative;
-    bottom : -200vw
-
+    bottom: -200vw
   }
-  
-  .location{
+
+  .location {
     font-size: 15px
   }
 
 }
 
-@media(max-width: 367px){
-  .rate-sugar{
+@media(max-width: 367px) {
+  .rate-sugar {
     font-size: 26px;
   }
+
+  .rate-sugar {
+    font-size: 24px;
+  }
+
+  .center-padhadi {
+    top: 17px;
+    margin: 20px;
+  }
+
 }
 
 
-@media(max-width: 290px)
-{
-  .name-sugar{
+@media(max-width: 290px) {
+  .name-sugar {
     font-size: 14px;
   }
 
-  .rate-sugar{
+  .rate-sugar {
     font-size: 19px;
   }
 }
 
-@media (min-width : 1650px)
-{
-  .back2{
+@media (min-width : 1650px) {
+  .back2 {
     margin-top: -25vw;
   }
 
-  .back3{
+  .back3 {
     margin-top: 3vw;
   }
 
-  .name-sugar{
+  .name-sugar {
     height: 95px;
   }
 
@@ -977,13 +983,44 @@ font-family: "Patua One", serif;
 }
 
 
-@media( min-width : 2300px)
-{
- 
-  .back2{
+@media(min-width : 2300px) {
+
+  .back2 {
     margin-top: -18vw;
   }
-  .back3{
+
+  .back3 {
     margin-top: 7vw;
   }
+}
+
+@media (max-width: 367px) {
+  .order{
+    margin-top: 94px;
+  }
+}
+
+/* Ragister Number */
+.register {
+  font-size: 26px;
+  text-align: center;
+  position: absolute;
+}
+
+#r-color3 {
+  color: red;
+}
+
+#r-color2 {
+  color: red
+}
+
+#r-color1 {
+  color: green;
+}
+
+#r-paghdi-rajvadi {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

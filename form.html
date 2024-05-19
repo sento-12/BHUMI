@@ -18,20 +18,26 @@
       <form action="./Pamphlet.html">
         <div class="user-details">
           <div class="input-box">
-            <span class="details">Parti Name</span>
+            <span class="details" >Parti Name</span>
             <input type="text" placeholder="Enter your name" id="partyName" class="valid" required>
           </div>
           <div class="input-box">
             <span class="details">GST Number</span>
-            <input type="text" placeholder="Enter your GST Number" id="gstNumber" >
+            <input type="text" placeholder="Enter your GST Number" id="gstNumber" class="valid"  pattern="[0-9A-Za-z]{14,15}" required>
           </div>
+
+
           <div class="input-box">
             <span class="details">PANCart Number</span>
-            <input type="text" placeholder="Enter your PANCart Number" id="PANcard" >
+            <input type="text" placeholder="Enter your PANCart Number" id="PANcard" class="valid-pancard valid" pattern="[0-9A-Za-z]{10}" required>
+            <div class="pancard-msg "></div>
           </div>
+
+
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" id="phoneNumber" placeholder="Enter your number" class="valid" required>
+            <input type="text" id="phoneNumber" placeholder="Enter your number" class="valid" pattern="[0-9]{10}" required>
+            <span id="msg-mobile " ></span>
           </div>
           <div class="input-box">
             <span class="details">City</span>
