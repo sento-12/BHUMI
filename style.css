@@ -31,6 +31,7 @@
 .nav-name {
   /* width: 100%; */
   height: 100%;
+  font-family: "Patua One", serif;
   /* border: 2px solid white; */
 
   /* display: flex; */
@@ -62,8 +63,9 @@
   border-radius: 5px;
   display: inline;
   margin-left: 16px;
-  /* word-spacing: 4px; */
-  /* letter-spacing: 5px; */
+  font-family: "Patua One", serif;
+  word-spacing: 11px;
+  letter-spacing: 6px;
 }
 
 .location {
