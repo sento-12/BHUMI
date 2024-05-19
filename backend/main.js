@@ -8,6 +8,10 @@ const Price = require("./models/price")
 const passport = require("./auth");
 require('dotenv').config();
 const bodyParser = require('body-parser');
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use(bodyParser.json());
 
@@ -52,6 +56,17 @@ app.get("/email", sendMail);
 
 const adminRoutes = require("./routes/adminRoutes")
 // admin pannale api call and get data parts
+
+
+//testing 
+
+// Handle all other routes by serving the frontend
+app.get('/temp', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'temp.html'));
+});
+
+//----------------------------------------------------------------
+
 
 
 app.use(passport.initialize());
