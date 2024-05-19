@@ -234,3 +234,26 @@ span{
     height: 250px;
    
 }
+
+/* Downloade Button */
+
+.pdf{
+    margin-bottom: -1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download{
+    width: 100px;
+    height: 100px;
+    
+}
+
+#downlode{
+    width: 124%;
+    height: 47%;
+    border-radius: 35%;
+    background-color:greenyellow;
+    cursor: pointer;
+}

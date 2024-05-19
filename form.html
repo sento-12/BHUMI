@@ -23,15 +23,15 @@
           </div>
           <div class="input-box">
             <span class="details">GST Number</span>
-            <input type="text" placeholder="Enter your GST Number" id="gstNumber" >
+            <input type="text" placeholder="Enter your GST Number" id="gstNumber" class="valid" required  pattern="[0-9A-Za-z]{14,15}">
           </div>
           <div class="input-box">
             <span class="details">PANCart Number</span>
-            <input type="text" placeholder="Enter your PANCart Number" id="PANcard" >
+            <input type="text" placeholder="Enter your PANCart Number" id="PANcard" class="valid" required pattern="[0-9A-Za-z]{10}" >
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" id="phoneNumber" placeholder="Enter your number" class="valid" required>
+            <input type="text" id="phoneNumber" placeholder="Enter your number" class="valid" required pattern="[0-9]{10}">
           </div>
           <div class="input-box">
             <span class="details">City</span>

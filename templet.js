@@ -52,3 +52,22 @@ async function get() {
 }
 
 get();
+
+
+// downloade the template
+window.onload = function (){
+  document.getElementById("downlode").addEventListener("click", () => {
+        const invoc = this.document.getElementById("dow-templet");
+      console.log(invoc)
+
+        var opt = {
+          marging:       0,
+          filename:     'Bhumi.pdf',
+          // image:        { type: 'jpeg', quality: 0.98 },
+          // html2canvas:  { scale: 2 },
+          // jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+
+        html2pdf().from(invoc).set(opt).save();
+  })
+}
