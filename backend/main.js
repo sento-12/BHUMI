@@ -61,9 +61,10 @@ const adminRoutes = require("./routes/adminRoutes")
 //testing 
 
 // Handle all other routes by serving the frontend
-app.get('/temp', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'temp.html'));
-});
+// app.get('/temp', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'public', 'temp.html'));
+//   console.log("fetch this api call")
+// });
 
 //----------------------------------------------------------------
 
