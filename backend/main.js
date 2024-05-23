@@ -34,11 +34,12 @@ app.post("/data", async (req, res) => {
 
 app.get("/getData", (req, res) => {
   const orderId = req.body.orderId;
-  Order.findOne({ _id: orderId })
-    // .sort({ _id: orderId })
-    // .limit(1)
-    // .then((order) => res.json(order))
-    // .catch((err) => res.json(err));
+  
+  Order.findOne()
+    .sort({ _id: -1 })
+    .limit(1)
+    .then((order) => res.json(order))
+    .catch((err) => res.json(err));
 });
 
 

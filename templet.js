@@ -4,9 +4,10 @@ async function get() {
   let a = await fetch("http://127.0.0.1:3000/getData");
 
   res = await a.json();
-  // console.log(res);
+  console.log(res);
   // console.log(res.data);
-  res.map((e) => {
+  const ress = new Array(res)
+  ress.map((e) => {
     document.getElementById("party").innerHTML = e.party;
     document.getElementById("city").innerHTML = e.city;
     document.getElementById("phoneNumber").innerHTML = e.phone;
