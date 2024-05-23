@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://kit.fontawesome.com/b4761c8186.js"
+      crossorigin="anonymous"></script>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f2f2f2;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .container {
+          max-width: 400px;
+          margin: 100px auto;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+        }
+      
+        .container i{
+          font-size: 50px;
+          margin-bottom: 15px;
+        }
+        
+        input {
+          width: 95%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+        
+        #loginBtn {
+          width: 100%;
+          padding: 10px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        
+        #loginBtn:hover {
+          background-color: #0056b3;
+        }
+        
+      </style>
+  </head>
+  <body>
+  
+   
+      <div class="container">
+        <i class="fa-solid fa-circle-user"></i>
+        <input type="text" id="username" placeholder="Username">
+        <div id="err-user" style="color: red;"></div>
+        <input type="password" id="password" placeholder="Password">
+        <div id="err-pass" style="color: red;"></div>
+        <input type="submit" id="loginBtn" onclick="return(check())">
+      </div>
+
+   <script>
+  async  function check(){
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+    const admin = {
+      username : username,
+       password: password
+    }
+    
+    
+    //validation
+  
+if (username.trim() === '') {
+document.getElementById("err-user").innerHTML = 'Username cannot be empty';
+return false;
+}else{
+document.getElementById("err-user").innerHTML = '';
+}
+  if (password.trim() === '') {
+    document.getElementById("err-pass").innerHTML = 'Password cannot be empty';
+    return false;
+  }else{
+    document.getElementById("err-pass").innerHTML = '';
+  }
+
+ try {
+    // First API call: Authenticate and get JWT token
+    const loginResponse = await fetch('/admin/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(admin)
+    });
+
+    if (!loginResponse.ok) {
+        throw new Error('Login failed');
+    }
+
+    const loginData = await loginResponse.json();
+
+    if (loginData.message === 'Login successful') {
+        // Store the token in localStorage or sessionStorage
+        localStorage.setItem('token', loginData.token);
+          
+          // Redirect to the dashboard page
+          window.location.href = '/admin/pannel';
+    } else {
+        alert('Login failed');
+    }
+} catch (error) {
+    console.error('Error:', error);
+    alert(error.message);
+}
+  }
+   </script>
+  </body>
+</html>

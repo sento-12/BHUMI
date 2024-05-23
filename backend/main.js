@@ -29,14 +29,16 @@ app.post("/data", async (req, res) => {
   console.log(req.body);
   await Order.create(req.body);
   res.send("hello my dear this is work");
+
 });
 
 app.get("/getData", (req, res) => {
-  Order.find()
-    .sort({ _id: -1 })
-    .limit(1)
-    .then((order) => res.json(order))
-    .catch((err) => res.json(err));
+  const orderId = req.body.orderId;
+  Order.findOne({ _id: orderId })
+    // .sort({ _id: orderId })
+    // .limit(1)
+    // .then((order) => res.json(order))
+    // .catch((err) => res.json(err));
 });
 
 

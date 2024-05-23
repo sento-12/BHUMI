@@ -43,10 +43,19 @@ window.location.href = "http://127.0.0.1:5500/index.html";
 
 
 function sendData() {
+
+  const token = localStorage.getItem('token');
+
+  if (!token) {
+      console.error('No token found, please log in first.');
+      return;
+  }
+
     fetch("http://127.0.0.1:3000/admin/price", {
      method : "POST",
      headers : {
-       "Content-type" : "application/json"
+       "Content-type" : "application/json",
+       'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify(formData)
     })

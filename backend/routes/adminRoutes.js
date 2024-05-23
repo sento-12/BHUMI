@@ -21,11 +21,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 
 
-const relativePath = '../admin/public/ad_pannel.html';
-const absolutePath = path.resolve(__dirname, relativePath);
+const relativePath = '../admin/public/admin_login.html';
+const adminPage = path.resolve(__dirname, relativePath);
 
-router.post("/",jwtAuthMiddleware, (req, res) => {
-  res.send("token is valid")
+const asulatePath = '../admin/public/ad_pannel.html';
+
+const absolutePath = path.join(__dirname, asulatePath);
+
+
+const Price_ = '../admin/public/price/price.html';
+const pricePannel  = path.join(__dirname, Price_);
+
+
+router.get("/", (req, res) => {
+  res.sendFile(adminPage)
 })
 
 
@@ -61,9 +70,10 @@ router.post('/login', async (req, res) =>{
     const token = generateToken(payload);
     // console.log(token)
   //  res.cookie('token', token)
-  // res.redirect("/admin/pannel")
-  return res.status(200)
-  .json({token, payload})
+  //  res.redirect("/admin/pannel")
+  // res.cookie('token', token, { httpOnly: true, secure: true }); // Set cookie
+  res.json({ message: 'Login successful', token: token });
+        // res.json({ message: 'Login successful', token: token });
   
   
 }catch(err){  
@@ -72,14 +82,18 @@ router.post('/login', async (req, res) =>{
 }
 } )
 
-router.get("/pannel", (req, res) => {
-  // res.sendFile(path.join(absolutePath));
+router.get("/pannel",  (req, res) => {
+  res.sendFile(absolutePath);
   console.log("you are in admin pannnel routere ")
-  return res.redirect("http://127.0.0.1:5500/backend/admin/public/ad_pannel.html")
+  // return res.redirect("http://127.0.0.1:5500/backend/admin/public/ad_pannel.html")
  
 })
 
-router.post("/price", async (req, res) => {
+router.get("/pricePannel", (req, res) => {
+  res.sendFile(pricePannel)
+})
+
+router.post("/price",jwtAuthMiddleware, async (req, res) => {
   console.log("work......... to price api ")
     console.log(req.body);
     await Price.updateMany({}, req.body).then(() => {

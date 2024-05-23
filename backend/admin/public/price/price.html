@@ -3,11 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="price.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <title>Document</title>
+
+
+    <style>
+        /* CSS styles similar to the website provided */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+    margin-bottom: 10px;
+  }
+
+  .input-group div{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .input-group label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .btn-submit {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-submit:hover {
+    background-color: #45a049;
+  }
+  
+    </style>
+
+<script>
+    const formData = {};
+function submit(){
+  const sections = document.querySelectorAll("section");
+  alert("work")
+  // Define an empty object to store values
+  let flag = true;
+
+  //CHECK all element is not empty
+  sections.forEach((section) => {
+    const sectionId = section.id;
+    formData[sectionId] = {};
+    const inputs = section.querySelectorAll(".input");
+
+    inputs.forEach((input) => {
+      if (input.value === "") {
+        flag = false;
+      }
+    });
+  });
+  console.log("Flag: " + flag);
+  
+  // Define an empty object to store values
+  if (flag === true) {
+    sections.forEach((section) => {
+      const sectionId = section.id;
+      formData[sectionId] = {};
+      const inputs = section.querySelectorAll(".input");
+
+      inputs.forEach((input) => {
+        
+      formData[sectionId][input.id] = input.value;
+    });
+});
+console.log(flag);
+console.log(formData);
+// send data funtion to server
+sendData()
+
+window.location.href = "http://127.0.0.1:5500/index.html";
+}
+}
+
+
+
+function sendData() {
+
+  const token = localStorage.getItem('token');
+
+  if (!token) {
+      console.error('No token found, please log in first.');
+      return;
+  }
+
+    fetch("http://127.0.0.1:3000/admin/price", {
+     method : "POST",
+     headers : {
+       "Content-type" : "application/json",
+       'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify(formData)
+    })
+
+}
+
+</script>
+
+
+
 </head>
 <body>
     
@@ -147,7 +284,6 @@
         <!-- <button class="btn-submit" onclick="submit()">Submit</button> -->
         <input type="submit" class="btn-submit" onclick="return(submit())">
     </div>
-    <script src="price.js"></script>
     
 </body>
 </html>

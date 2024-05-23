@@ -61,4 +61,7 @@ async function getPrice(){
     })
 }
 
+document.querySelector(".admin").addEventListener("click",() => {
+    window.location = "http://127.0.0.1:3000/admin"
+})
 getPrice()
