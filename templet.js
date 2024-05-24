@@ -11,8 +11,8 @@ async function get() {
     document.getElementById("party").innerHTML = e.party;
     document.getElementById("city").innerHTML = e.city;
     document.getElementById("phoneNumber").innerHTML = e.phone;
-    document.getElementById("PANcard").innerHTML = e.pancard;
-    document.getElementById("gstNumber").innerHTML = e.gst;
+    // document.getElementById("PANcard").innerHTML = e.pancard;
+    // document.getElementById("gstNumber").innerHTML = e.gst;
 
     // console.log(e.item[0]);
     let item = e.item

@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
 const { connectMongoDB } = require("../connect"); // Import the function to connect to MongoDB
-
+const Order = require("../models/order");
 const sendMail = async (req, res) => {
   async function partyName() {
     // Connect to MongoDB
@@ -8,15 +8,16 @@ const sendMail = async (req, res) => {
 
     try {
       // Access your database and collection
-      const database = client.db("BHUMI"); // Replace with your database name
+      const database = client.db("bhumi"); // Replace with your database name
       const collection = database.collection("orders"); // Replace with your collection name
 
       // Find party names
-      const partyNames = await collection.findOne({}, { sort: { _id: -1 } });
-
+      const partyNames = await Order.findOne().sort({ _id: -1 }).limit(1)
+      console.log(partyNames)
       //const all data for email
       const subject = partyNames.party;
       const item = partyNames.item;
+      new Array(item)
       console.log(partyNames);
       console.log(`item ${item}`)
       function formating(){
@@ -86,7 +87,7 @@ const sendMail = async (req, res) => {
 
       const info = {
         from: '"ORDER" <sentobirl@gmail.com>', // sender address
-        to: "sentobirl@gmail.com", // list of receivers "info.bhumiindustries@gmail.com"
+        to: "info.bhumiindustries@gmail.com", // list of receivers "info.bhumiindustries@gmail.com"
         subject: `Order By ${subject}`, // Subject line
         text: "Hello world?", // plain text body
         html: formating()        // html body

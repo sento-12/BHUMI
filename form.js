@@ -54,11 +54,11 @@ document.querySelector(".submit").addEventListener("click", ()=> {
 
  var obj = {
   "party" : party,
-  // "gst" : gst,
-  // "pancard" : pancard,
+  "gst" : gst,
+  "pancard" : pancard,
   "phone" : phone,
   "city" : city,
-  "item" : item
+  "item" : item || null
  }
  console.log(obj);
  let flag = 0
@@ -77,11 +77,11 @@ console.log(input)
  //send data to server
  if(flag==0){
    fetch("http://127.0.0.1:3000/data", {
-     method : "POST",
-     headers : {
-       "Content-type" : "application/json"
-      },
-      body: JSON.stringify(obj)
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(obj)
     })  
     console.log(time);
     fetch("http://127.0.0.1:3000/email"); 

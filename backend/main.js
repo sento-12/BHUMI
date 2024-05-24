@@ -38,11 +38,27 @@ mongoose.connect(uri, {
 
 // order api call and get data parts client order data client order data client side
 app.post("/data", async (req, res) => {
-  console.log(req.body);
-  await Order.create(req.body);
-  res.send("hello my dear this is work");
+  console.log("access to order save pannele ")
+  const userData = req.body;
 
+    const newUser = new Order(userData);
+
+    newUser.save()
+        .then(user => {
+            res.status(201).json({
+                message: 'User created successfully',
+                user
+            });
+        })
+        .catch(err => {
+            res.status(400).json({
+                message: 'Error creating user',
+                error: err.message
+            });
+        });
 });
+
+
 
 app.get("/getData", (req, res) => {
     Order.findOne()
