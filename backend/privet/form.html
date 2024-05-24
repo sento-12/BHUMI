@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Responsive Registration Form | CodingLab </title>
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="http://127.0.0.1:3000/templet">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Parti Name</span>
+            <input type="text" placeholder="Enter your name" id="partyName" class="valid" required>
+          </div>
+          <div class="input-box">
+            <span class="details">GST Number</span>
+            <input type="text" placeholder="Enter your GST Number" id="gstNumber"  pattern="[0-9A-Za-z]{14,15}">
+          </div>
+          <div class="input-box">
+            <span class="details">PANCart Number</span>
+            <input type="text" placeholder="Enter your PANCart Number" id="PANcard"  pattern="[0-9A-Za-z]{10}" >
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" id="phoneNumber" placeholder="Enter your number" class="valid" required pattern="[0-9]{10}">
+          </div>
+          <div class="input-box">
+            <span class="details">City</span>
+            <input type="text" id="city" placeholder="Enter your City" class="valid" required>
+          </div>
+        </div>
+        <h2>
+          type of item
+        </h2>
+        <div class="main-Categries">
+
+          
+        <div id="size">
+          <div class="input-box">
+            <span > BAG</span>
+            <input type="text" placeholder="exe bag"class="deta"  id="bag" class="valid" required ><br>
+            <span id="msg-nan" class="mag"></span>
+          </div>
+          
+          <div class="input-box">
+            <span > Weight</span>
+            <select placeholder="Confirm your password" id="box1" class="valid" required>
+              <option>50 kg</option>
+              <option>60 kg</option>
+              
+            
+                
+              </select>
+            </div>       
+          <div class="input-box">
+            <span > Brand</span>
+            <input type="text" placeholder="Exp-keser gold" class="deta" id="brand" class="valid" required><br>
+            <span id="mag-mt" class="mag"></span>
+          </div>
+
+          <div class="input-box">
+            <span > Price</span>
+            <input type="text" placeholder="1400 - 1530" class="deta" id="price" class="valid" required><br>
+            <span id="mag-mt" class="mag"></span>
+          </div> 
+          
+        </div>
+      </div>
+      
+      
+      <div class="symbol" >
+        <span >
+           Add-Item
+          </span>
+      </div>
+  <input type="submit" value="Registration" class="submit">
+
+   
+    </form>
+  </div>
+  </div>
+
+
+
+  <script src="form.js"></script>
+ 
+</body>
+
+</html>
+

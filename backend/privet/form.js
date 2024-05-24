@@ -1,6 +1,6 @@
 
 
-document.querySelector(".submit").addEventListener("click", ()=> {
+document.querySelector(".submit").addEventListener("click",async ()=> {
     // Get user input and return flase value
     document.querySelectorAll("input[type=text]").forEach(e => {
       if(e.value === ""){
@@ -76,7 +76,7 @@ console.log(input)
 
  //send data to server
  if(flag==0){
-   fetch("http://127.0.0.1:3000/data", {
+  await fetch("http://127.0.0.1:3000/data", {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -84,9 +84,14 @@ console.log(input)
     body: JSON.stringify(obj)
     })  
     console.log(time);
-    fetch("http://127.0.0.1:3000/email"); 
+   await fetch("http://127.0.0.1:3000/email"); 
     fetch("http://127.0.0.1:3000/whatsapp");    
+    // window.location.href = "http://127.0.0.1:3000/templet"
   }
+
+
+
+
   
 })
 

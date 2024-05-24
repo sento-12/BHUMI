@@ -10,7 +10,7 @@ require('dotenv').config();
 const bodyParser = require('body-parser');
 const path = require('path');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'privet')));
 
 
 app.use(bodyParser.json());
@@ -36,14 +36,42 @@ mongoose.connect(uri, {
 });
 
 
+
+const relativePath = '/index.html';
+const indexPage = path.resolve(__dirname, relativePath);
+
+
+const form = 'privet/form.html';
+const formPage = path.resolve(__dirname, form);
+
+
+
+const templet = 'privet/Pamphlet.html';
+const templetPage = path.resolve(__dirname, templet);
+
+
+app.get("/", (req, res) => {
+  res.sendFile(indexPage)
+})
+
+app.get("/form", (req, res) => {
+  res.sendFile(formPage)
+})
+
+
+app.get("/templet", (req, res) => {
+  res.sendFile(templetPage)
+})
+
+
 // order api call and get data parts client order data client order data client side
 app.post("/data", async (req, res) => {
   console.log("access to order save pannele ")
-  const userData = req.body;
+  const userData =await req.body;
 
     const newUser = new Order(userData);
 
-    newUser.save()
+   await newUser.save()
         .then(user => {
             res.status(201).json({
                 message: 'User created successfully',
@@ -60,8 +88,9 @@ app.post("/data", async (req, res) => {
 
 
 
-app.get("/getData", (req, res) => {
-    Order.findOne()
+app.get("/getData", async(req, res) => {
+  
+  await  Order.findOne()
     .sort({ _id: -1 })
     .limit(1)
     .then((order) => res.json(order))
@@ -105,7 +134,8 @@ const localAuthMiddleware = passport.authenticate('local', {session: false})
 
 //WHATSAPP messenger api call and get data parts
 
-const whatsapp = require("./controllers/sendWhatsapp")
+const whatsapp = require("./controllers/sendWhatsapp");
+const { TIMEOUT } = require("dns");
 app.get("/whatsapp", whatsapp)
 
 app.use('/admin', adminRoutes);
