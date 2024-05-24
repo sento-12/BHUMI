@@ -87,7 +87,7 @@
 
 .footer-bar {
   /* height: 150px; */
-  width: 100%;
+  width: 105%;
   background-color: #222e50;
   border-top: 5px solid white;
   /* margin-bottom: 15px; */
@@ -265,7 +265,7 @@
 
 .back,
 img {
-  width: 100%;
+ width: 103%;
 }
 
 .contener1 {
@@ -555,6 +555,7 @@ img {
 
     .header-bar {
       justify-content: space-evenly;
+      width: 104%;
     }
 
 
@@ -888,11 +889,34 @@ img {
 }
 
 
+@media(max-width : 366px) {
+  .header-bar {
+    width: 112%;
+}
+
+.nav-name {
+  width: 155px;
+}
+}
+
+
 @media(max-width : 435px) {
   .fotter {
     position: relative;
     bottom: -178vw
   }
+
+  .footer-bar {
+    width: 110%;
+}
+
+.nav-name {
+    width: 155px;
+}
+
+.header-bar {
+  width: 109%;
+}
 
   .location {
     font-size: 15px
