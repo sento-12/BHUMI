@@ -18,10 +18,12 @@ document.querySelector(".submit").addEventListener("click", ()=> {
   }
 
   let party = document.querySelector("#partyName").value;
-  let gst = document.querySelector("#gstNumber").value;
-  let pancard = document.querySelector("#PANcard").value;
+  let gst = document.querySelector("#gstNumber").value || 'no value';
+  let pancard = document.querySelector("#PANcard").value || 'no value';
   let phone = document.querySelector("#phoneNumber").value;
   let city = document.querySelector("#city").value;
+
+  
 
 
   // // console.log(name.value, gst, pancard, phone, city, bag, wieght, brand,price)
@@ -52,8 +54,8 @@ document.querySelector(".submit").addEventListener("click", ()=> {
 
  var obj = {
   "party" : party,
-  "gst" : gst,
-  "pancard" : pancard,
+  // "gst" : gst,
+  // "pancard" : pancard,
   "phone" : phone,
   "city" : city,
   "item" : item

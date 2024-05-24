@@ -39,11 +39,11 @@ router.get("/", (req, res) => {
 
 
 
-// router.get("/singup", (req, res) => {
-//         Admin.create(req.body)
-//         res.send(req.body)
-// }
-// )
+router.get("/singup", (req, res) => {
+        Admin.create(req.body)
+        res.send(req.body)
+}
+)
 
 
 
@@ -99,6 +99,7 @@ router.post("/price",jwtAuthMiddleware, async (req, res) => {
     await Price.updateMany({}, req.body).then(() => {
       res.send("thiss is admin pannel price change routes updated");
     });
+    // Price.create(req.body)
   });
   
 

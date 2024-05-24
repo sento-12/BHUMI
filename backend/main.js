@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const cors = require("cors");
 const { default: mongoose } = require("mongoose");
 const sendMail = require("./controllers/sendMail");
@@ -22,7 +22,19 @@ app.use(cors());
 
 app.use(express.json());
 
-const data = mongoose.connect("mongodb://localhost:27017/BHUMI");
+// const uri = process.env.URL_MONGODB
+const uri = process.env.URL_MONGODB
+
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 10000 // 10 seconds
+}).then(() => {
+  console.log('Connected to MongoDB');
+}).catch(err => {
+  console.error('Error connecting to MongoDB', err);
+});
+
 
 // order api call and get data parts client order data client order data client side
 app.post("/data", async (req, res) => {
@@ -33,9 +45,7 @@ app.post("/data", async (req, res) => {
 });
 
 app.get("/getData", (req, res) => {
-  const orderId = req.body.orderId;
-  
-  Order.findOne()
+    Order.findOne()
     .sort({ _id: -1 })
     .limit(1)
     .then((order) => res.json(order))
