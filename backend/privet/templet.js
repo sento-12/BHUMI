@@ -1,7 +1,7 @@
 var res;
 
 async function get() {
-  let a = await fetch("http://127.0.0.1:3000/getData");
+  let a = await fetch("/getData");
 
   res = await a.json();
   console.log(res);

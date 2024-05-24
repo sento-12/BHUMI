@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function getPrice(){
-    let a = await fetch("http://127.0.0.1:3000/getPrice")
+    let a = await fetch("/getPrice")
 
     let res = await a.json()
 
@@ -62,6 +62,6 @@ async function getPrice(){
 }
 
 document.querySelector(".admin").addEventListener("click",() => {
-    window.location = "http://127.0.0.1:3000/admin"
+    window.location = "/admin"
 })
 getPrice()

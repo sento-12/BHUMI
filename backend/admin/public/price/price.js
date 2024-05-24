@@ -42,7 +42,7 @@ sendData()
 
 
 
-window.location.href = "http://127.0.0.1:5500/index.html";
+window.location.href = "/";
 }
 }
 
@@ -57,7 +57,7 @@ function sendData() {
       return;
   }
 
-    fetch("http://127.0.0.1:3000/admin/price", {
+    fetch("/admin/price", {
      method : "POST",
      headers : {
        "Content-type" : "application/json",

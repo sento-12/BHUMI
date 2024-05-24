@@ -76,7 +76,7 @@ console.log(input)
 
  //send data to server
  if(flag==0){
-  await fetch("http://127.0.0.1:3000/data", {
+  await fetch("/data", {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -84,8 +84,8 @@ console.log(input)
     body: JSON.stringify(obj)
     })  
     console.log(time);
-   await fetch("http://127.0.0.1:3000/email"); 
-    fetch("http://127.0.0.1:3000/whatsapp");    
+   await fetch("/email"); 
+    fetch("/whatsapp");    
     // window.location.href = "http://127.0.0.1:3000/templet"
   }
 
