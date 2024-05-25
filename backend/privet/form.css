@@ -209,7 +209,7 @@ form .submit:hover {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 85%;
+  width: 100%;
   margin: 15px;
 }
 
@@ -275,3 +275,20 @@ form .submit:hover {
     flex-direction: column;
   }  
 }  
+
+
+
+@media(max-width: 584px){
+  .main-Categries{
+    width: 120%;
+
+  }
+
+  .deta{
+    width: 65%;
+  }
+
+  #box1 {
+    width: 41%;
+  }
+}
