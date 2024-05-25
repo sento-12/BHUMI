@@ -608,7 +608,7 @@ img {
     }
 
     #line {
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .location {
@@ -964,7 +964,7 @@ img {
 
 @media(max-width: 367px) {
   .rate-sugar {
-    font-size: 24px;
+    font-size: 17px;
   }
 
   .back,
@@ -1061,10 +1061,15 @@ img {
 }
 
 
-@media (max-width: 367px) {
+@media (max-width: 336px) {
   .name-sugar {
-      font-size: 17px;
+      font-size: 15px;
   }
+  .fotter {
+    position: relative;
+    bottom: -222vw;
+}
+
 }
 
 
@@ -1073,6 +1078,7 @@ img {
   .name-sugar {
       font-size: 15px;
   }
+
 }
 
 
