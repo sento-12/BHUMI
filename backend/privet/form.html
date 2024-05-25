@@ -17,6 +17,15 @@
     <div class="content">
       <form action="/templet">
         <div class="user-details">
+
+          <div class="input-box ">
+            <span class="details">Broker</span>
+            <input type="text" placeholder="Enter Broker Name " id="broker" class="valid" required>
+          </div>
+          <br>  
+        </div>
+
+        <div class="user-details" style="margin-top: 5px;">
           <div class="input-box">
             <span class="details">Parti Name</span>
             <input type="text" placeholder="Enter your name" id="partyName" class="valid" required>
@@ -53,7 +62,7 @@
           
           <div class="input-box">
             <span > Weight</span>
-            <select placeholder="Confirm your password" id="box1" class="valid" required>
+            <select placeholder="Confirm your password" id="box" class="valid" required>
               <option aria-checked="true">50 kg</option>
               <option>60 kg</option>
               
@@ -61,11 +70,32 @@
                 
               </select>
             </div>       
-          <div class="input-box">
-            <span > Brand</span>
-            <input type="text" placeholder="keser gold" class="deta" id="brand" class="valid" required><br>
-            <span id="mag-mt" class="mag"></span>
-          </div>
+            <div class="input-box">
+              <span > Brand </span>
+              <select placeholder="Confirm your password"style="margin-top: 10px;" id="box1" class="valid" required>
+                <option value=" " disabled selected>SELECT</option>
+                <option value=" KESAR">KESARGOLD</option>
+                <option value=" VRUNDAVAN">VRUNDAVAN</option>
+                <option value=" PAGHADI">PAGHADI</option>
+                
+              
+                  
+                </select>
+              </div>      
+              
+              <div class="input-box">
+                <span > BAG TYPE </span>
+                <select placeholder="Confirm your password"style="margin-top: 10px;" id="box2" class="valid" required>
+                  <option value=" "  disabled selected>SELECT</option>
+                  <option>SUGAR</option>
+                  <option>NAFED</option>
+                  <option>JOD</option>
+                  <option>PP BAG</option>
+                  
+                
+                    
+                  </select>
+                </div>       
 
           <div class="input-box">
             <span > Price</span>

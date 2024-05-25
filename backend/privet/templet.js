@@ -8,6 +8,8 @@ async function get() {
   // console.log(res.data);
   const ress = new Array(res)
   ress.map((e) => {
+    document.getElementById("broker").innerHTML = e.broker;
+
     document.getElementById("party").innerHTML = e.party;
     document.getElementById("city").innerHTML = e.city;
     document.getElementById("phoneNumber").innerHTML = e.phone;

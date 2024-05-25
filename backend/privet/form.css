@@ -151,7 +151,7 @@ form .submit:hover {
 
 /* edition */
 
-#box1{
+#box1, #box2{
   width: 30%;
   border-radius: 5px;
   padding: 10px;

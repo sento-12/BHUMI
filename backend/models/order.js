@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const orderSchema = new mongoose.Schema({
+  broker : {type: String},
   party: { type: String, required: true },
   gst: { type: String, default: 'no value' },
   pancard: { type: String, default: 'no value' },
