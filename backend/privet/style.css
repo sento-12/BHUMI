@@ -1066,4 +1066,11 @@ img {
     font-size: 18px;
   }
 }
+
+
+@media (max-width: 290px) {
+    .rate-sugar {
+        font-size: 19px;
+    }
+}
   /* >>>>>>> e2e774f70ee7ce037088f2d7aac126ee21728a5d */
