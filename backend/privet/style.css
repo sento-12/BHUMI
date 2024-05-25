@@ -265,7 +265,7 @@
 
 .back,
 img {
- width: 103%;
+  width: 103%;
 }
 
 .contener1 {
@@ -892,11 +892,11 @@ img {
 @media(max-width : 366px) {
   .header-bar {
     width: 112%;
-}
+  }
 
-.nav-name {
-  width: 155px;
-}
+  .nav-name {
+    width: 155px;
+  }
 }
 
 
@@ -908,15 +908,15 @@ img {
 
   .footer-bar {
     width: 110%;
-}
+  }
 
-.nav-name {
+  .nav-name {
     width: 155px;
-}
+  }
 
-.header-bar {
-  width: 109%;
-}
+  .header-bar {
+    width: 109%;
+  }
 
   .location {
     font-size: 15px
@@ -1056,8 +1056,14 @@ img {
 
 @media (max-width: 410px) {
   .name-sugar {
-      font-size: 17px;
+    font-size: 17px;
   }
 }
 
-/* >>>>>>> e2e774f70ee7ce037088f2d7aac126ee21728a5d */
+
+@media (max-width: 367px) {
+  .rate-sugar {
+    font-size: 18px;
+  }
+}
+  /* >>>>>>> e2e774f70ee7ce037088f2d7aac126ee21728a5d */
