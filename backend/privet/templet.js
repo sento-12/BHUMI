@@ -30,6 +30,7 @@ async function get() {
         <div class="bagi" style="width: 20%;text-align: center;">${e.bag}</div>
         <div class="weigthi" style="width: 20%;text-align: center;">${e.wieght}</div>
         <div class="brandi" style="width: 20%;text-align: center;">${e.brand}</div>
+        <div class="weigthi" style="width: 20%;text-align: center;">${e.bagBrand}</div>
         <div class="price" style="width: 20%;text-align: center;">${e.price}</div>
  </div>`
       console.log(e);

@@ -301,6 +301,7 @@ img {
 .rate {
   width: 100%;
   height: -47vw;
+  text-wrap: nowrap;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -311,6 +312,7 @@ img {
 .rate-50kg {
   width: 40%;
   height: 45%;
+  text-wrap: nowrap;
   border: 3px solid #c135afd1;
   position: relative;
   border-radius: 15px;
@@ -356,6 +358,8 @@ img {
   opacity: 0.7;
   position: relative;
   z-index: 0;
+  text-wrap: nowrap;
+
 }
 
 .contener2 {
@@ -386,6 +390,8 @@ img {
 
 
 .rate_padhadi {
+  text-wrap: nowrap;
+
   width: 100%;
   height: -6vw;
   display: flex;

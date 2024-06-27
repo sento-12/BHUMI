@@ -47,6 +47,7 @@ const sendMail = async (req, res) => {
         <th>Wiegth</th>
         <th>Price</th>
         <th>Brand</th>
+        <th>Bag Brand</th>
     </tr>
 
 
@@ -60,6 +61,7 @@ const sendMail = async (req, res) => {
                 <td>${e.wieght}</td>
                 <td>${e.price}</td>
                 <td>${e.brand}</td>
+                <td>${e.bagBrand}</td>
             </tr>
             `;
             });
@@ -115,4 +117,4 @@ const sendMail = async (req, res) => {
   partyName();
 };
 
-module.exports = sendMail;
+  module.exports = sendMail;

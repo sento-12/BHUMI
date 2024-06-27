@@ -22,7 +22,7 @@ app.use(cors());
 
 app.use(express.json());
 
-// const uri = process.env.URL_MONGODB
+// const uri = process.env.LOCAL_URL
 const uri = process.env.URL_MONGODB
 
 mongoose.connect(uri, {
