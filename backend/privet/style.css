@@ -110,6 +110,14 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.fotter .tekpai{
+  height: auto;
+  /* margin: auto; */
+  /* border: 2px solid white; */
+  border-radius: 4px;
+  width: 70px;
+  cursor: pointer;
+}
 .changeWeb {
   width: 110px;
   position: absolute;
